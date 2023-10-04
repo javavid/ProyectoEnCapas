@@ -30,8 +30,8 @@
         {
             botonentrar = new Button();
             buttonsalir = new Button();
-            textusuario = new TextBox();
-            textcontraseña = new TextBox();
+            textUsuario = new TextBox();
+            textContraseña = new TextBox();
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
@@ -56,22 +56,23 @@
             buttonsalir.TabIndex = 1;
             buttonsalir.Text = "salir";
             buttonsalir.UseVisualStyleBackColor = true;
+            buttonsalir.Click += buttonsalir_Click;
             // 
-            // textusuario
+            // textUsuario
             // 
-            textusuario.Location = new Point(290, 90);
-            textusuario.Margin = new Padding(4, 5, 4, 5);
-            textusuario.Name = "textusuario";
-            textusuario.Size = new Size(278, 31);
-            textusuario.TabIndex = 2;
+            textUsuario.Location = new Point(290, 90);
+            textUsuario.Margin = new Padding(4, 5, 4, 5);
+            textUsuario.Name = "textUsuario";
+            textUsuario.Size = new Size(278, 31);
+            textUsuario.TabIndex = 2;
             // 
-            // textcontraseña
+            // textContraseña
             // 
-            textcontraseña.Location = new Point(290, 243);
-            textcontraseña.Margin = new Padding(4, 5, 4, 5);
-            textcontraseña.Name = "textcontraseña";
-            textcontraseña.Size = new Size(278, 31);
-            textcontraseña.TabIndex = 3;
+            textContraseña.Location = new Point(290, 243);
+            textContraseña.Margin = new Padding(4, 5, 4, 5);
+            textContraseña.Name = "textContraseña";
+            textContraseña.Size = new Size(278, 31);
+            textContraseña.TabIndex = 3;
             // 
             // label1
             // 
@@ -100,8 +101,8 @@
             ClientSize = new Size(587, 503);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textcontraseña);
-            Controls.Add(textusuario);
+            Controls.Add(textContraseña);
+            Controls.Add(textUsuario);
             Controls.Add(buttonsalir);
             Controls.Add(botonentrar);
             Margin = new Padding(4, 5, 4, 5);
@@ -115,8 +116,8 @@
 
         private Button botonentrar;
         private Button buttonsalir;
-        private TextBox textusuario;
-        private TextBox textcontraseña;
+        private TextBox textUsuario;
+        private TextBox textContraseña;
         private Label label1;
         private Label label2;
     }
