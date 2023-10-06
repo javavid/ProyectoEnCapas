@@ -19,6 +19,12 @@ namespace CapaInterfaz
         }
 
 
+        private void botonConexionDB_Click(object sender, EventArgs e)
+        {
+            capanegocio.PruebaMySql();
+        }
+
+
         private void buttonsalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -42,7 +48,7 @@ namespace CapaInterfaz
                     textContraseña.Focus();
                     return;
                 }
-                //capanegocio.PruebaMySql();
+               
 
             }
             else
@@ -51,10 +57,12 @@ namespace CapaInterfaz
                 textContraseña.Clear();
                 Form2 registros = new Form2();
                 registros.ShowDialog();
-                
+
             }
 
-            
+
         }
+
+        
     }
 }

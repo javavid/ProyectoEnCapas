@@ -16,5 +16,10 @@ namespace CapaInterfaz
         {
             InitializeComponent();
         }
+
+        private void ConexionDB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

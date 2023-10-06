@@ -34,6 +34,7 @@
             textContraseña = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            botonConexionDB = new Button();
             SuspendLayout();
             // 
             // botonentrar
@@ -94,11 +95,22 @@
             label2.TabIndex = 5;
             label2.Text = "contraseña";
             // 
+            // botonConexionDB
+            // 
+            botonConexionDB.Location = new Point(241, 357);
+            botonConexionDB.Name = "botonConexionDB";
+            botonConexionDB.Size = new Size(158, 34);
+            botonConexionDB.TabIndex = 6;
+            botonConexionDB.Text = "ConexionDB";
+            botonConexionDB.UseVisualStyleBackColor = true;
+            botonConexionDB.Click += botonConexionDB_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(587, 503);
+            Controls.Add(botonConexionDB);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textContraseña);
@@ -120,5 +132,6 @@
         private TextBox textContraseña;
         private Label label1;
         private Label label2;
+        private Button botonConexionDB;
     }
 }

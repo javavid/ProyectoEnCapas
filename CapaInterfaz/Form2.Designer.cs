@@ -47,41 +47,46 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(131, 59);
+            textBox1.Location = new Point(187, 98);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(141, 31);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(131, 103);
+            textBox2.Location = new Point(187, 172);
+            textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(141, 31);
             textBox2.TabIndex = 1;
             // 
             // buttonnuevo
             // 
-            buttonnuevo.Location = new Point(75, 329);
+            buttonnuevo.Location = new Point(107, 548);
+            buttonnuevo.Margin = new Padding(4, 5, 4, 5);
             buttonnuevo.Name = "buttonnuevo";
-            buttonnuevo.Size = new Size(75, 23);
+            buttonnuevo.Size = new Size(107, 38);
             buttonnuevo.TabIndex = 2;
             buttonnuevo.Text = "nuevo";
             buttonnuevo.UseVisualStyleBackColor = true;
             // 
             // buttoneliminar
             // 
-            buttoneliminar.Location = new Point(186, 329);
+            buttoneliminar.Location = new Point(266, 548);
+            buttoneliminar.Margin = new Padding(4, 5, 4, 5);
             buttoneliminar.Name = "buttoneliminar";
-            buttoneliminar.Size = new Size(75, 23);
+            buttoneliminar.Size = new Size(107, 38);
             buttoneliminar.TabIndex = 3;
             buttoneliminar.Text = "eliminar";
             buttoneliminar.UseVisualStyleBackColor = true;
             // 
             // buttonguardar
             // 
-            buttonguardar.Location = new Point(297, 329);
+            buttonguardar.Location = new Point(424, 548);
+            buttonguardar.Margin = new Padding(4, 5, 4, 5);
             buttonguardar.Name = "buttonguardar";
-            buttonguardar.Size = new Size(75, 23);
+            buttonguardar.Size = new Size(107, 38);
             buttonguardar.TabIndex = 4;
             buttonguardar.Text = "guardar";
             buttonguardar.UseVisualStyleBackColor = true;
@@ -89,79 +94,87 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(75, 59);
+            label1.Location = new Point(107, 98);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(49, 15);
+            label1.Size = new Size(75, 25);
             label1.TabIndex = 5;
             label1.Text = "nombre";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(75, 103);
+            label2.Location = new Point(107, 172);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(49, 15);
+            label2.Size = new Size(75, 25);
             label2.TabIndex = 6;
             label2.Text = "apellido";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(131, 152);
+            pictureBox1.Location = new Point(187, 253);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 96);
+            pictureBox1.Size = new Size(143, 160);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(75, 152);
+            label3.Location = new Point(107, 253);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(29, 15);
+            label3.Size = new Size(46, 25);
             label3.TabIndex = 8;
             label3.Text = "foto";
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(64, 167);
+            linkLabel1.Location = new Point(91, 278);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(66, 15);
+            linkLabel1.Size = new Size(98, 25);
             linkLabel1.TabIndex = 9;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "seleccionar";
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(131, 21);
+            numericUpDown1.Location = new Point(187, 35);
+            numericUpDown1.Margin = new Padding(4, 5, 4, 5);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.Size = new Size(171, 31);
             numericUpDown1.TabIndex = 10;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(75, 21);
+            label4.Location = new Point(107, 35);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(17, 15);
+            label4.Size = new Size(27, 25);
             label4.TabIndex = 11;
             label4.Text = "id";
             // 
             // checkBox1provedores
             // 
             checkBox1provedores.AutoSize = true;
-            checkBox1provedores.Location = new Point(322, 43);
+            checkBox1provedores.Location = new Point(460, 72);
+            checkBox1provedores.Margin = new Padding(4, 5, 4, 5);
             checkBox1provedores.Name = "checkBox1provedores";
-            checkBox1provedores.Size = new Size(85, 19);
+            checkBox1provedores.Size = new Size(129, 29);
             checkBox1provedores.TabIndex = 12;
             checkBox1provedores.Text = "provedores";
             checkBox1provedores.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(445, 450);
+            ClientSize = new Size(636, 750);
             Controls.Add(checkBox1provedores);
             Controls.Add(label4);
             Controls.Add(numericUpDown1);
@@ -175,6 +188,7 @@
             Controls.Add(buttonnuevo);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form2";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
