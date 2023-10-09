@@ -1,6 +1,6 @@
 ﻿namespace CapaInterfaz
 {
-    partial class Form2
+    partial class clientes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textnombre = new TextBox();
+            textapellido = new TextBox();
             buttonnuevo = new Button();
             buttoneliminar = new Button();
             buttonguardar = new Button();
             label1 = new Label();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
+            campofoto = new PictureBox();
             label3 = new Label();
-            linkLabel1 = new LinkLabel();
-            numericUpDown1 = new NumericUpDown();
+            linkFoto = new LinkLabel();
+            ID = new NumericUpDown();
             label4 = new Label();
-            checkBox1provedores = new CheckBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)campofoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ID).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // textnombre
             // 
-            textBox1.Location = new Point(187, 98);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(141, 31);
-            textBox1.TabIndex = 0;
+            textnombre.Location = new Point(187, 98);
+            textnombre.Margin = new Padding(4, 5, 4, 5);
+            textnombre.Name = "textnombre";
+            textnombre.Size = new Size(141, 31);
+            textnombre.TabIndex = 0;
             // 
-            // textBox2
+            // textapellido
             // 
-            textBox2.Location = new Point(187, 172);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(141, 31);
-            textBox2.TabIndex = 1;
+            textapellido.Location = new Point(187, 172);
+            textapellido.Margin = new Padding(4, 5, 4, 5);
+            textapellido.Name = "textapellido";
+            textapellido.Size = new Size(141, 31);
+            textapellido.TabIndex = 1;
             // 
             // buttonnuevo
             // 
@@ -70,6 +69,7 @@
             buttonnuevo.TabIndex = 2;
             buttonnuevo.Text = "nuevo";
             buttonnuevo.UseVisualStyleBackColor = true;
+            buttonnuevo.Click += buttonnuevo_Click;
             // 
             // buttoneliminar
             // 
@@ -90,6 +90,7 @@
             buttonguardar.TabIndex = 4;
             buttonguardar.Text = "guardar";
             buttonguardar.UseVisualStyleBackColor = true;
+            buttonguardar.Click += buttonguardar_Click;
             // 
             // label1
             // 
@@ -111,14 +112,14 @@
             label2.TabIndex = 6;
             label2.Text = "apellido";
             // 
-            // pictureBox1
+            // campofoto
             // 
-            pictureBox1.Location = new Point(187, 253);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(143, 160);
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
+            campofoto.Location = new Point(187, 253);
+            campofoto.Margin = new Padding(4, 5, 4, 5);
+            campofoto.Name = "campofoto";
+            campofoto.Size = new Size(143, 160);
+            campofoto.TabIndex = 7;
+            campofoto.TabStop = false;
             // 
             // label3
             // 
@@ -130,24 +131,25 @@
             label3.TabIndex = 8;
             label3.Text = "foto";
             // 
-            // linkLabel1
+            // linkFoto
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(91, 278);
-            linkLabel1.Margin = new Padding(4, 0, 4, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(98, 25);
-            linkLabel1.TabIndex = 9;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "seleccionar";
+            linkFoto.AutoSize = true;
+            linkFoto.Location = new Point(91, 278);
+            linkFoto.Margin = new Padding(4, 0, 4, 0);
+            linkFoto.Name = "linkFoto";
+            linkFoto.Size = new Size(98, 25);
+            linkFoto.TabIndex = 9;
+            linkFoto.TabStop = true;
+            linkFoto.Text = "seleccionar";
+            linkFoto.LinkClicked += linkFoto_LinkClicked;
             // 
-            // numericUpDown1
+            // ID
             // 
-            numericUpDown1.Location = new Point(187, 35);
-            numericUpDown1.Margin = new Padding(4, 5, 4, 5);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(171, 31);
-            numericUpDown1.TabIndex = 10;
+            ID.Location = new Point(187, 35);
+            ID.Margin = new Padding(4, 5, 4, 5);
+            ID.Name = "ID";
+            ID.Size = new Size(171, 31);
+            ID.TabIndex = 10;
             // 
             // label4
             // 
@@ -159,58 +161,45 @@
             label4.TabIndex = 11;
             label4.Text = "id";
             // 
-            // checkBox1provedores
-            // 
-            checkBox1provedores.AutoSize = true;
-            checkBox1provedores.Location = new Point(460, 72);
-            checkBox1provedores.Margin = new Padding(4, 5, 4, 5);
-            checkBox1provedores.Name = "checkBox1provedores";
-            checkBox1provedores.Size = new Size(129, 29);
-            checkBox1provedores.TabIndex = 12;
-            checkBox1provedores.Text = "provedores";
-            checkBox1provedores.UseVisualStyleBackColor = true;
-            // 
-            // Form2
+            // clientes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(636, 750);
-            Controls.Add(checkBox1provedores);
             Controls.Add(label4);
-            Controls.Add(numericUpDown1);
-            Controls.Add(linkLabel1);
+            Controls.Add(ID);
+            Controls.Add(linkFoto);
             Controls.Add(label3);
-            Controls.Add(pictureBox1);
+            Controls.Add(campofoto);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(buttonguardar);
             Controls.Add(buttoneliminar);
             Controls.Add(buttonnuevo);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textapellido);
+            Controls.Add(textnombre);
             Margin = new Padding(4, 5, 4, 5);
-            Name = "Form2";
-            Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Name = "clientes";
+            Text = "clientes";
+            ((System.ComponentModel.ISupportInitialize)campofoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ID).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textnombre;
+        private TextBox textapellido;
         private Button buttonnuevo;
         private Button buttoneliminar;
         private Button buttonguardar;
         private Label label1;
         private Label label2;
-        private PictureBox pictureBox1;
+        private PictureBox campofoto;
         private Label label3;
-        private LinkLabel linkLabel1;
-        private NumericUpDown numericUpDown1;
+        private LinkLabel linkFoto;
+        private NumericUpDown ID;
         private Label label4;
-        private CheckBox checkBox1provedores;
     }
 }

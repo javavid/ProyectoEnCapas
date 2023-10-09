@@ -9,7 +9,7 @@ namespace CapaInterfaz
 {
     public partial class Form1 : Form
     {
-        string usuario = "David";
+        string usuario = "eder";
         string contraseña = "54321";
 
         CNlogueo capanegocio = new CNlogueo();
@@ -48,14 +48,14 @@ namespace CapaInterfaz
                     textContraseña.Focus();
                     return;
                 }
-               
+
 
             }
             else
             {
                 textUsuario.Clear();
                 textContraseña.Clear();
-                Form2 registros = new Form2();
+                clientes registros = new clientes();
                 registros.ShowDialog();
 
             }
@@ -63,6 +63,9 @@ namespace CapaInterfaz
 
         }
 
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
