@@ -32,7 +32,7 @@ namespace CapaDatos
         {
             MySqlConnection mySqlConnection1 = new MySqlConnection(cadenaconexion);
             mySqlConnection1.Open();
-            string Query = "INSERT INTO `base_sistem_pos`.`clientes` (`nombre`, `apellido`, `foto`) VALUES ('" + ce.nombre + "', '" + ce.apellido + "','" + MySql.Data.MySqlClient.MySqlHelper.EscapeString(ce.foto) + "');";
+            string Query = "INSERT INTO `base_sistema_pos`.`clientes` (`nombre`, `apellido`, `foto`) VALUES ('" + ce.nombre + "', '" + ce.apellido + "','" + MySql.Data.MySqlClient.MySqlHelper.EscapeString(ce.foto) + "');";
             MySqlCommand mySqlCommand1 = new MySqlCommand(Query, mySqlConnection1);
             mySqlCommand1.ExecuteNonQuery();
             mySqlConnection1.Close();
@@ -44,7 +44,7 @@ namespace CapaDatos
         {
             MySqlConnection mySqlConnection1 = new MySqlConnection(cadenaconexion);
             mySqlConnection1.Open();
-            string Query = "INSERT INTO `base_sistem_pos`.`clientes` (`nombre`, `apellido`, `foto`) VALUES ('" + ce.nombre + "', '" + ce.apellido + "','" + MySql.Data.MySqlClient.MySqlHelper.EscapeString(ce.foto) + "');";
+            string Query = "INSERT INTO `base_sistema_pos`.`clientes` (`nombre`, `apellido`, `foto`) VALUES ('" + ce.nombre + "', '" + ce.apellido + "','" + MySql.Data.MySqlClient.MySqlHelper.EscapeString(ce.foto) + "');";
             MySqlCommand mySqlCommand1 = new MySqlCommand(Query, mySqlConnection1);
             mySqlCommand1.ExecuteNonQuery();
             mySqlConnection1.Close();
