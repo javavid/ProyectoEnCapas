@@ -51,6 +51,7 @@
             textnombre.Name = "textnombre";
             textnombre.Size = new Size(141, 31);
             textnombre.TabIndex = 0;
+            
             // 
             // textapellido
             // 
