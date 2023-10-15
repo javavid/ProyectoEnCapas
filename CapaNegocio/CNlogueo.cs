@@ -10,16 +10,16 @@ namespace CapaNegocio
     {
         CDlogueo capadatos = new CDlogueo();
 
-        public void PruebaMySql() 
+        public void PruebaMySql()
         {
-         capadatos.PruebaConexion();
+            capadatos.PruebaConexion();
         }
 
         public bool ValidarDatos(CElogueo cliente)
         {
             bool resultado = true;
 
-            if(cliente.nombre == string.Empty)
+            if (cliente.nombre == string.Empty)
             {
                 resultado = false;
                 MessageBox.Show("El nombre es obligatorio");
@@ -39,14 +39,25 @@ namespace CapaNegocio
 
             return resultado;
         }
-        public void CrearClientes(CElogueo cE) 
+        public void CrearClientes(CElogueo cE)
         {
-         capadatos.Crear(cE);
+            capadatos.Crear(cE);
         }
 
         public DataSet ObtenerDatos()
         {
             return capadatos.Listar();
         }
-    }
+
+        public void EditarCliente(CElogueo cE)
+        {
+            capadatos.Editar(cE);
+        }
+
+        public void EliminarCliente(CElogueo cE)
+        {
+            capadatos.Eliminar(cE);
+        }
+
+            }
 }

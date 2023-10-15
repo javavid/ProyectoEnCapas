@@ -40,8 +40,10 @@
             linkFoto = new LinkLabel();
             ID = new NumericUpDown();
             label4 = new Label();
+            dataGrid = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)campofoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ID).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGrid).BeginInit();
             SuspendLayout();
             // 
             // textnombre
@@ -51,7 +53,6 @@
             textnombre.Name = "textnombre";
             textnombre.Size = new Size(141, 31);
             textnombre.TabIndex = 0;
-            
             // 
             // textapellido
             // 
@@ -81,6 +82,7 @@
             buttoneliminar.TabIndex = 3;
             buttoneliminar.Text = "eliminar";
             buttoneliminar.UseVisualStyleBackColor = true;
+            buttoneliminar.Click += buttoneliminar_Click;
             // 
             // buttonguardar
             // 
@@ -162,11 +164,23 @@
             label4.TabIndex = 11;
             label4.Text = "id";
             // 
+            // dataGrid
+            // 
+            dataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGrid.Location = new Point(365, 35);
+            dataGrid.Name = "dataGrid";
+            dataGrid.RowHeadersWidth = 62;
+            dataGrid.RowTemplate.Height = 33;
+            dataGrid.Size = new Size(895, 378);
+            dataGrid.TabIndex = 12;
+            dataGrid.CellDoubleClick += dataGrid_CellDoubleClick;
+            // 
             // clientes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(636, 750);
+            ClientSize = new Size(1272, 750);
+            Controls.Add(dataGrid);
             Controls.Add(label4);
             Controls.Add(ID);
             Controls.Add(linkFoto);
@@ -182,8 +196,10 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "clientes";
             Text = "clientes";
+            Load += clientes_Load;
             ((System.ComponentModel.ISupportInitialize)campofoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)ID).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,5 +218,6 @@
         private LinkLabel linkFoto;
         private NumericUpDown ID;
         private Label label4;
+        private DataGridView dataGrid;
     }
 }

@@ -14,6 +14,7 @@ namespace CapaInterfaz
 {
     public partial class clientes : Form
     {
+        CNlogueo cNlogueo2 = new CNlogueo();
         public clientes()
         {
             InitializeComponent();
@@ -70,11 +71,47 @@ namespace CapaInterfaz
             {
                 cNlogueo1.CrearClientes(cElogueo1);
             }
-
+            else
+            {
+                cNlogueo1.EditarCliente(cElogueo1);
+            }
 
             limpiarForm();
+            cargarDatos();
         }
 
-        
+        private void clientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cargarDatos()
+        {
+            dataGrid.DataSource = cNlogueo2.ObtenerDatos().Tables["tbl"];
+        }
+
+        private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ID.Value = (int)dataGrid.CurrentRow.Cells["id"].Value;
+            textnombre.Text = dataGrid.CurrentRow.Cells["nombre"].Value.ToString();
+            textapellido.Text = dataGrid.CurrentRow.Cells["apellido"].Value.ToString();
+            campofoto.Load(dataGrid.CurrentRow.Cells["foto"].Value.ToString());
+        }
+
+        private void buttoneliminar_Click(object sender, EventArgs e)
+        {
+            if (ID.Value == 0)
+            {
+                return;
+            }
+
+            if (MessageBox.Show("Estas seguro?", "eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+
+            CElogueo cElogueo2 = new CElogueo();
+            cElogueo2.id = (int)ID.Value;
+            cNlogueo2.EliminarCliente(cElogueo2);
+            cargarDatos();
+            limpiarForm();
+        }
     }
 }
