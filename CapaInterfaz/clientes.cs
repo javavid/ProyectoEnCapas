@@ -82,7 +82,7 @@ namespace CapaInterfaz
 
         private void clientes_Load(object sender, EventArgs e)
         {
-
+            cargarDatos();
         }
 
         private void cargarDatos()
