@@ -55,7 +55,8 @@ namespace CapaInterfaz
             {
                 textUsuario.Clear();
                 textContraseña.Clear();
-                clientes registros = new clientes();
+                //clientes registros = new clientes();
+                Menu registros = new Menu();
                 registros.ShowDialog();
 
             }
