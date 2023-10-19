@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             tabControl1 = new TabControl();
-            proveedores = new TabPage();
             clientes = new TabPage();
             dataGrid = new DataGridView();
             groupclientes = new GroupBox();
@@ -54,29 +53,29 @@
             facturacion = new TabPage();
             label7 = new Label();
             groupBox1 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            buttoneliminarf = new Button();
+            buttonguardarf = new Button();
+            buttonuevof = new Button();
             label14 = new Label();
-            textBox11 = new TextBox();
-            textBox10 = new TextBox();
+            telf = new TextBox();
+            ivaf = new TextBox();
             label13 = new Label();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
+            texttotalf = new TextBox();
+            textcantidadf = new TextBox();
+            textvalorunif = new TextBox();
+            textcodigof = new TextBox();
             inventario = new TabPage();
             panel1 = new Panel();
             label15 = new Label();
             groupBox2 = new GroupBox();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
+            buttoneliminari = new Button();
+            buttonguardari = new Button();
+            buttonuevoi = new Button();
             label22 = new Label();
             label21 = new Label();
             label20 = new Label();
@@ -84,14 +83,19 @@
             label18 = new Label();
             label17 = new Label();
             label16 = new Label();
-            dataGridView1 = new DataGridView();
-            textBox18 = new TextBox();
+            dataGridi = new DataGridView();
+            textdescripcioni = new TextBox();
             textBox17 = new TextBox();
-            textBox16 = new TextBox();
-            textBox15 = new TextBox();
-            textBox14 = new TextBox();
-            textBox13 = new TextBox();
-            textBox12 = new TextBox();
+            textsalidasi = new TextBox();
+            textstocki = new TextBox();
+            textprecioi = new TextBox();
+            textimporteinventarioi = new TextBox();
+            textcodigoi = new TextBox();
+            IDF = new DomainUpDown();
+            label23 = new Label();
+            textentradasi = new TextBox();
+            label24 = new Label();
+            IDIN = new DomainUpDown();
             tabControl1.SuspendLayout();
             clientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGrid).BeginInit();
@@ -103,12 +107,11 @@
             inventario.SuspendLayout();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridi).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(proveedores);
             tabControl1.Controls.Add(clientes);
             tabControl1.Controls.Add(facturacion);
             tabControl1.Controls.Add(inventario);
@@ -117,16 +120,6 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1114, 579);
             tabControl1.TabIndex = 0;
-            // 
-            // proveedores
-            // 
-            proveedores.Location = new Point(4, 34);
-            proveedores.Name = "proveedores";
-            proveedores.Padding = new Padding(3);
-            proveedores.Size = new Size(1106, 541);
-            proveedores.TabIndex = 0;
-            proveedores.Text = "Proveedores";
-            proveedores.UseVisualStyleBackColor = true;
             // 
             // clientes
             // 
@@ -349,7 +342,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Black", 72F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ControlDarkDark;
-            label7.Location = new Point(275, 8);
+            label7.Location = new Point(14, 8);
             label7.Name = "label7";
             label7.Size = new Size(604, 191);
             label7.TabIndex = 1;
@@ -358,22 +351,24 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Gainsboro;
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(label23);
+            groupBox1.Controls.Add(IDF);
+            groupBox1.Controls.Add(buttoneliminarf);
+            groupBox1.Controls.Add(buttonguardarf);
+            groupBox1.Controls.Add(buttonuevof);
             groupBox1.Controls.Add(label14);
-            groupBox1.Controls.Add(textBox11);
-            groupBox1.Controls.Add(textBox10);
+            groupBox1.Controls.Add(telf);
+            groupBox1.Controls.Add(ivaf);
             groupBox1.Controls.Add(label13);
             groupBox1.Controls.Add(label12);
             groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(label10);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox9);
-            groupBox1.Controls.Add(textBox8);
-            groupBox1.Controls.Add(textBox7);
-            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(texttotalf);
+            groupBox1.Controls.Add(textcantidadf);
+            groupBox1.Controls.Add(textvalorunif);
+            groupBox1.Controls.Add(textcodigof);
             groupBox1.Location = new Point(8, 202);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1090, 329);
@@ -381,32 +376,33 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
-            // button3
+            // buttoneliminarf
             // 
-            button3.Location = new Point(961, 279);
-            button3.Name = "button3";
-            button3.Size = new Size(84, 34);
-            button3.TabIndex = 17;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            buttoneliminarf.Location = new Point(961, 279);
+            buttoneliminarf.Name = "buttoneliminarf";
+            buttoneliminarf.Size = new Size(84, 34);
+            buttoneliminarf.TabIndex = 17;
+            buttoneliminarf.Text = "Eliminar";
+            buttoneliminarf.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonguardarf
             // 
-            button2.Location = new Point(833, 279);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 34);
-            button2.TabIndex = 16;
-            button2.Text = "Guardar";
-            button2.UseVisualStyleBackColor = true;
+            buttonguardarf.Location = new Point(833, 279);
+            buttonguardarf.Name = "buttonguardarf";
+            buttonguardarf.Size = new Size(84, 34);
+            buttonguardarf.TabIndex = 16;
+            buttonguardarf.Text = "Guardar";
+            buttonguardarf.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonuevof
             // 
-            button1.Location = new Point(699, 279);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 34);
-            button1.TabIndex = 14;
-            button1.Text = "Nuevo";
-            button1.UseVisualStyleBackColor = true;
+            buttonuevof.Location = new Point(699, 279);
+            buttonuevof.Name = "buttonuevof";
+            buttonuevof.Size = new Size(84, 34);
+            buttonuevof.TabIndex = 14;
+            buttonuevof.Text = "Nuevo";
+            buttonuevof.UseVisualStyleBackColor = true;
+            buttonuevof.Click += buttonuevof_Click;
             // 
             // label14
             // 
@@ -417,19 +413,19 @@
             label14.TabIndex = 12;
             label14.Text = "tel:";
             // 
-            // textBox11
+            // telf
             // 
-            textBox11.Location = new Point(460, 229);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(201, 31);
-            textBox11.TabIndex = 11;
+            telf.Location = new Point(460, 229);
+            telf.Name = "telf";
+            telf.Size = new Size(201, 31);
+            telf.TabIndex = 11;
             // 
-            // textBox10
+            // ivaf
             // 
-            textBox10.Location = new Point(44, 229);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(344, 31);
-            textBox10.TabIndex = 10;
+            ivaf.Location = new Point(44, 229);
+            ivaf.Name = "ivaf";
+            ivaf.Size = new Size(344, 31);
+            ivaf.TabIndex = 10;
             // 
             // label13
             // 
@@ -451,7 +447,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(833, 57);
+            label11.Location = new Point(833, 92);
             label11.Name = "label11";
             label11.Size = new Size(48, 25);
             label11.TabIndex = 7;
@@ -460,7 +456,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(571, 57);
+            label10.Location = new Point(571, 92);
             label10.Name = "label10";
             label10.Size = new Size(82, 25);
             label10.TabIndex = 6;
@@ -469,7 +465,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(308, 57);
+            label9.Location = new Point(308, 92);
             label9.Name = "label9";
             label9.Size = new Size(80, 25);
             label9.TabIndex = 5;
@@ -478,39 +474,39 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(44, 57);
+            label8.Location = new Point(44, 92);
             label8.Name = "label8";
             label8.Size = new Size(68, 25);
             label8.TabIndex = 4;
             label8.Text = "codigo";
             // 
-            // textBox9
+            // texttotalf
             // 
-            textBox9.Location = new Point(833, 85);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(212, 31);
-            textBox9.TabIndex = 3;
+            texttotalf.Location = new Point(833, 120);
+            texttotalf.Name = "texttotalf";
+            texttotalf.Size = new Size(212, 31);
+            texttotalf.TabIndex = 3;
             // 
-            // textBox8
+            // textcantidadf
             // 
-            textBox8.Location = new Point(308, 85);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(212, 31);
-            textBox8.TabIndex = 2;
+            textcantidadf.Location = new Point(308, 120);
+            textcantidadf.Name = "textcantidadf";
+            textcantidadf.Size = new Size(212, 31);
+            textcantidadf.TabIndex = 2;
             // 
-            // textBox7
+            // textvalorunif
             // 
-            textBox7.Location = new Point(571, 85);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(212, 31);
-            textBox7.TabIndex = 1;
+            textvalorunif.Location = new Point(571, 120);
+            textvalorunif.Name = "textvalorunif";
+            textvalorunif.Size = new Size(212, 31);
+            textvalorunif.TabIndex = 1;
             // 
-            // textBox6
+            // textcodigof
             // 
-            textBox6.Location = new Point(44, 85);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(212, 31);
-            textBox6.TabIndex = 0;
+            textcodigof.Location = new Point(44, 120);
+            textcodigof.Name = "textcodigof";
+            textcodigof.Size = new Size(212, 31);
+            textcodigof.TabIndex = 0;
             // 
             // inventario
             // 
@@ -547,9 +543,12 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.Linen;
-            groupBox2.Controls.Add(button6);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(IDIN);
+            groupBox2.Controls.Add(label24);
+            groupBox2.Controls.Add(textentradasi);
+            groupBox2.Controls.Add(buttoneliminari);
+            groupBox2.Controls.Add(buttonguardari);
+            groupBox2.Controls.Add(buttonuevoi);
             groupBox2.Controls.Add(label22);
             groupBox2.Controls.Add(label21);
             groupBox2.Controls.Add(label20);
@@ -557,14 +556,14 @@
             groupBox2.Controls.Add(label18);
             groupBox2.Controls.Add(label17);
             groupBox2.Controls.Add(label16);
-            groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Controls.Add(textBox18);
+            groupBox2.Controls.Add(dataGridi);
+            groupBox2.Controls.Add(textdescripcioni);
             groupBox2.Controls.Add(textBox17);
-            groupBox2.Controls.Add(textBox16);
-            groupBox2.Controls.Add(textBox15);
-            groupBox2.Controls.Add(textBox14);
-            groupBox2.Controls.Add(textBox13);
-            groupBox2.Controls.Add(textBox12);
+            groupBox2.Controls.Add(textsalidasi);
+            groupBox2.Controls.Add(textstocki);
+            groupBox2.Controls.Add(textprecioi);
+            groupBox2.Controls.Add(textimporteinventarioi);
+            groupBox2.Controls.Add(textcodigoi);
             groupBox2.Location = new Point(8, 119);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(1090, 412);
@@ -572,37 +571,37 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "groupBox2";
             // 
-            // button6
+            // buttoneliminari
             // 
-            button6.Location = new Point(675, 372);
-            button6.Name = "button6";
-            button6.Size = new Size(84, 34);
-            button6.TabIndex = 18;
-            button6.Text = "Eliminar";
-            button6.UseVisualStyleBackColor = true;
+            buttoneliminari.Location = new Point(675, 372);
+            buttoneliminari.Name = "buttoneliminari";
+            buttoneliminari.Size = new Size(84, 34);
+            buttoneliminari.TabIndex = 18;
+            buttoneliminari.Text = "Eliminar";
+            buttoneliminari.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonguardari
             // 
-            button5.Location = new Point(548, 372);
-            button5.Name = "button5";
-            button5.Size = new Size(84, 34);
-            button5.TabIndex = 17;
-            button5.Text = "Guardar";
-            button5.UseVisualStyleBackColor = true;
+            buttonguardari.Location = new Point(548, 372);
+            buttonguardari.Name = "buttonguardari";
+            buttonguardari.Size = new Size(84, 34);
+            buttonguardari.TabIndex = 17;
+            buttonguardari.Text = "Guardar";
+            buttonguardari.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonuevoi
             // 
-            button4.Location = new Point(424, 372);
-            button4.Name = "button4";
-            button4.Size = new Size(84, 34);
-            button4.TabIndex = 15;
-            button4.Text = "Nuevo";
-            button4.UseVisualStyleBackColor = true;
+            buttonuevoi.Location = new Point(424, 372);
+            buttonuevoi.Name = "buttonuevoi";
+            buttonuevoi.Size = new Size(84, 34);
+            buttonuevoi.TabIndex = 15;
+            buttonuevoi.Text = "Nuevo";
+            buttonuevoi.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(207, 226);
+            label22.Location = new Point(207, 330);
             label22.Name = "label22";
             label22.Size = new Size(158, 25);
             label22.TabIndex = 14;
@@ -611,7 +610,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(207, 125);
+            label21.Location = new Point(207, 226);
             label21.Name = "label21";
             label21.Size = new Size(61, 25);
             label21.TabIndex = 13;
@@ -620,7 +619,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(207, 40);
+            label20.Location = new Point(207, 125);
             label20.Name = "label20";
             label20.Size = new Size(54, 25);
             label20.TabIndex = 12;
@@ -629,7 +628,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(6, 330);
+            label19.Location = new Point(207, 40);
             label19.Name = "label19";
             label19.Size = new Size(65, 25);
             label19.TabIndex = 11;
@@ -638,7 +637,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(6, 226);
+            label18.Location = new Point(6, 330);
             label18.Name = "label18";
             label18.Size = new Size(80, 25);
             label18.TabIndex = 10;
@@ -647,7 +646,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(6, 125);
+            label17.Location = new Point(6, 226);
             label17.Name = "label17";
             label17.Size = new Size(102, 25);
             label17.TabIndex = 9;
@@ -656,28 +655,28 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(6, 40);
+            label16.Location = new Point(6, 125);
             label16.Name = "label16";
             label16.Size = new Size(68, 25);
             label16.TabIndex = 8;
             label16.Text = "codigo";
             // 
-            // dataGridView1
+            // dataGridi
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(424, 68);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(648, 262);
-            dataGridView1.TabIndex = 7;
+            dataGridi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridi.Location = new Point(363, 30);
+            dataGridi.Name = "dataGridi";
+            dataGridi.RowHeadersWidth = 62;
+            dataGridi.RowTemplate.Height = 33;
+            dataGridi.Size = new Size(709, 325);
+            dataGridi.TabIndex = 7;
             // 
-            // textBox18
+            // textdescripcioni
             // 
-            textBox18.Location = new Point(6, 153);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(150, 31);
-            textBox18.TabIndex = 6;
+            textdescripcioni.Location = new Point(6, 254);
+            textdescripcioni.Name = "textdescripcioni";
+            textdescripcioni.Size = new Size(150, 31);
+            textdescripcioni.TabIndex = 6;
             // 
             // textBox17
             // 
@@ -686,40 +685,81 @@
             textBox17.Size = new Size(150, 31);
             textBox17.TabIndex = 5;
             // 
-            // textBox16
+            // textsalidasi
             // 
-            textBox16.Location = new Point(6, 358);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(150, 31);
-            textBox16.TabIndex = 4;
+            textsalidasi.Location = new Point(207, 68);
+            textsalidasi.Name = "textsalidasi";
+            textsalidasi.Size = new Size(150, 31);
+            textsalidasi.TabIndex = 4;
             // 
-            // textBox15
+            // textstocki
             // 
-            textBox15.Location = new Point(207, 68);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(150, 31);
-            textBox15.TabIndex = 3;
+            textstocki.Location = new Point(207, 153);
+            textstocki.Name = "textstocki";
+            textstocki.Size = new Size(150, 31);
+            textstocki.TabIndex = 3;
             // 
-            // textBox14
+            // textprecioi
             // 
-            textBox14.Location = new Point(207, 153);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(150, 31);
-            textBox14.TabIndex = 2;
+            textprecioi.Location = new Point(207, 254);
+            textprecioi.Name = "textprecioi";
+            textprecioi.Size = new Size(150, 31);
+            textprecioi.TabIndex = 2;
             // 
-            // textBox13
+            // textimporteinventarioi
             // 
-            textBox13.Location = new Point(207, 254);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(150, 31);
-            textBox13.TabIndex = 1;
+            textimporteinventarioi.Location = new Point(207, 358);
+            textimporteinventarioi.Name = "textimporteinventarioi";
+            textimporteinventarioi.Size = new Size(150, 31);
+            textimporteinventarioi.TabIndex = 1;
             // 
-            // textBox12
+            // textcodigoi
             // 
-            textBox12.Location = new Point(6, 68);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(150, 31);
-            textBox12.TabIndex = 0;
+            textcodigoi.Location = new Point(6, 153);
+            textcodigoi.Name = "textcodigoi";
+            textcodigoi.Size = new Size(150, 31);
+            textcodigoi.TabIndex = 0;
+            // 
+            // IDF
+            // 
+            IDF.Location = new Point(44, 58);
+            IDF.Name = "IDF";
+            IDF.Size = new Size(180, 31);
+            IDF.TabIndex = 18;
+            IDF.Text = "domainUpDown1";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(44, 30);
+            label23.Name = "label23";
+            label23.Size = new Size(27, 25);
+            label23.TabIndex = 19;
+            label23.Text = "id";
+            // 
+            // textentradasi
+            // 
+            textentradasi.Location = new Point(6, 358);
+            textentradasi.Name = "textentradasi";
+            textentradasi.Size = new Size(150, 31);
+            textentradasi.TabIndex = 19;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(6, 40);
+            label24.Name = "label24";
+            label24.Size = new Size(27, 25);
+            label24.TabIndex = 21;
+            label24.Text = "id";
+            // 
+            // IDIN
+            // 
+            IDIN.Location = new Point(6, 68);
+            IDIN.Name = "IDIN";
+            IDIN.Size = new Size(180, 31);
+            IDIN.TabIndex = 22;
+            IDIN.Text = "domainUpDown1";
             // 
             // Menu
             // 
@@ -746,14 +786,13 @@
             panel1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridi).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private TabControl tabControl1;
-        private TabPage proveedores;
         private TabPage clientes;
         private TabPage facturacion;
         private TabPage inventario;
@@ -778,19 +817,19 @@
         private Button botonNuevo;
         private Label label7;
         private GroupBox groupBox1;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
+        private TextBox texttotalf;
+        private TextBox textcantidadf;
+        private TextBox textvalorunif;
+        private TextBox textcodigof;
         private Label label11;
         private Label label10;
         private Label label9;
         private Label label8;
-        private TextBox textBox10;
+        private TextBox ivaf;
         private Label label13;
         private Label label12;
         private Label label14;
-        private TextBox textBox11;
+        private TextBox telf;
         private Panel panel1;
         private GroupBox groupBox2;
         private Label label15;
@@ -801,20 +840,25 @@
         private Label label18;
         private Label label17;
         private Label label16;
-        private DataGridView dataGridView1;
-        private TextBox textBox18;
+        private DataGridView dataGridi;
+        private TextBox textdescripcioni;
         private TextBox textBox17;
-        private TextBox textBox16;
-        private TextBox textBox15;
-        private TextBox textBox14;
-        private TextBox textBox13;
-        private TextBox textBox12;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Button button6;
-        private Button button5;
-        private Button button4;
+        private TextBox textsalidasi;
+        private TextBox textstocki;
+        private TextBox textprecioi;
+        private TextBox textimporteinventarioi;
+        private TextBox textcodigoi;
+        private Button buttoneliminarf;
+        private Button buttonguardarf;
+        private Button buttonuevof;
+        private Button buttoneliminari;
+        private Button buttonguardari;
+        private Button buttonuevoi;
         private DataGridView dataGrid;
+        private Label label23;
+        private DomainUpDown IDF;
+        private Label label24;
+        private TextBox textentradasi;
+        private DomainUpDown IDIN;
     }
 }

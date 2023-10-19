@@ -125,5 +125,10 @@ namespace CapaInterfaz
         {
 
         }
+
+        private void buttonuevof_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
