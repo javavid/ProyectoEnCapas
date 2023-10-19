@@ -129,6 +129,13 @@ namespace CapaInterfaz
         private void buttonuevof_Click(object sender, EventArgs e)
         {
 
+            ID.Value = 0;
+            textcodigof.Text = string.Empty;
+            textcantidadf.Text = string.Empty;
+            textvalorunif.Text = string.Empty;
+            texttotalf.Text = string.Empty;
+            textivaf.Text = string.Empty;
+            textelf.Text = string.Empty;
         }
     }
 }
