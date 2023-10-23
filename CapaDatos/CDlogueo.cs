@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using CapaEntidad;
 using System.Windows.Forms;
 using System.Data;
+using SpreadsheetLight;
 
 namespace CapaDatos
 {
@@ -78,6 +79,42 @@ namespace CapaDatos
             mySqlCommand1.ExecuteNonQuery();
             mySqlConnection1.Close();
             MessageBox.Show("Registro Eliminado exictosamente");
+        }
+
+        public void ExportarExcel()
+        {
+            SLDocument sLDocument1 = new SLDocument();
+
+            int celdaCabecera = 2;
+
+            sLDocument1.RenameWorksheet(SLDocument.DefaultFirstSheetName, "clientes");
+
+            sLDocument1.SetCellValue("B" + celdaCabecera, "nombre");
+            sLDocument1.SetCellValue("C" + celdaCabecera, "apellido");
+            sLDocument1.SetCellValue("D" + celdaCabecera, "foto");
+
+
+            MySqlConnection mysqlconnection2 = new MySqlConnection(cadenaconexion);
+            mysqlconnection2.Open();
+            string Query = "SELECT id, nombre, apellido, foto FROM base_sistema_pos.clientes ";
+            MySqlCommand mysqlCommand2 = new MySqlCommand(Query, mysqlconnection2);
+            MySqlDataReader mySqlDataReader3 = mysqlCommand2.ExecuteReader();
+            
+            while (mySqlDataReader3.Read())
+            {
+                celdaCabecera++;
+
+                sLDocument1.SetCellValue("B" + celdaCabecera, mySqlDataReader3["nombre"].ToString());
+                sLDocument1.SetCellValue("C" + celdaCabecera, mySqlDataReader3["apellido"].ToString());
+                sLDocument1.SetCellValue("D" + celdaCabecera, mySqlDataReader3["foto"].ToString());
+
+
+            }
+            sLDocument1.SaveAs("ArchivoHZ.xlsx");
+            MessageBox.Show("Reporte generado Exitosamente");
+
+
+
         }
     }
 }

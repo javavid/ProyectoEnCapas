@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SpreadsheetLight;
 
 namespace CapaInterfaz
 {
@@ -128,14 +129,37 @@ namespace CapaInterfaz
 
         private void buttonuevof_Click(object sender, EventArgs e)
         {
+            limpiarFormF();
+        }
 
-            ID.Value = 0;
-            textcodigof.Text = string.Empty;
+        private void limpiarFormF()
+        {
+
+            idcodigof.Text = string.Empty;
             textcantidadf.Text = string.Empty;
             textvalorunif.Text = string.Empty;
             texttotalf.Text = string.Empty;
             textivaf.Text = string.Empty;
             textelf.Text = string.Empty;
+        }
+
+        private void buttonguardarf_Click(object sender, EventArgs e)
+        {
+            bool result;
+
+            CElogueo cElogueo2 = new CElogueo();
+
+            cElogueo2.codigo = idcodigof.Text;
+            cElogueo2.cantidad = textcantidadf.Text;
+            cElogueo2.valoruni = textvalorunif.Text;
+            cElogueo2.total = texttotalf.Text;
+            cElogueo2.iva = textivaf.Text;
+            cElogueo2.tel = textelf.Text;
+        }
+
+        private void buttonExcel_Click(object sender, EventArgs e)
+        {
+            cNlogueo2.ExportarExcel2();
         }
     }
 }

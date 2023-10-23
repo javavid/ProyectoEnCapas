@@ -13,7 +13,7 @@
 
         public string foto { get; set;}
 
-        public int codigo { get; set;}
+        public string codigo { get; set;}
 
         public string cantidad { get; set;}
 
@@ -21,20 +21,20 @@
 
         public string total { get; set;}
 
-        public double iva { get; set;}
+        public string iva { get; set;}
 
-        public int tel { get; set;}
+        public string tel { get; set;}
 
         public string descripcion { get; set; }
 
-        public int entradas { get; set;}
+        public string entradas { get; set;}
 
-        public int salidas { get; set;}
+        public string salidas { get; set;}
 
-        public int stock { get; set;}
+        public string stock { get; set;}
 
-        public int precio { get; set;}
+        public string precio { get; set;}
 
-        public int importeinventario { get; set;}
+        public string importeinventario { get; set;}
     }
 }

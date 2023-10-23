@@ -32,6 +32,7 @@
             clientes = new TabPage();
             dataGrid = new DataGridView();
             groupclientes = new GroupBox();
+            buttonExcel = new Button();
             botonEliminar = new Button();
             botonGuardar = new Button();
             botonModificar = new Button();
@@ -53,6 +54,7 @@
             facturacion = new TabPage();
             label7 = new Label();
             groupBox1 = new GroupBox();
+            dataGridfactura = new DataGridView();
             buttoneliminarf = new Button();
             buttonguardarf = new Button();
             buttonuevof = new Button();
@@ -68,7 +70,7 @@
             texttotalf = new TextBox();
             textcantidadf = new TextBox();
             textvalorunif = new TextBox();
-            textcodigof = new TextBox();
+            idcodigof = new TextBox();
             inventario = new TabPage();
             panel1 = new Panel();
             label15 = new Label();
@@ -84,13 +86,13 @@
             label18 = new Label();
             label17 = new Label();
             label16 = new Label();
-            dataGridi = new DataGridView();
+            dataGridinventario = new DataGridView();
             textdescripcioni = new TextBox();
             textsalidasi = new TextBox();
             textstocki = new TextBox();
             textprecioi = new TextBox();
             textimporteinventarioi = new TextBox();
-            textcodigoi = new TextBox();
+            idcodigoinv = new TextBox();
             tabControl1.SuspendLayout();
             clientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGrid).BeginInit();
@@ -99,10 +101,11 @@
             ((System.ComponentModel.ISupportInitialize)campofoto).BeginInit();
             facturacion.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridfactura).BeginInit();
             inventario.SuspendLayout();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridinventario).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -142,6 +145,7 @@
             // 
             // groupclientes
             // 
+            groupclientes.Controls.Add(buttonExcel);
             groupclientes.Controls.Add(botonEliminar);
             groupclientes.Controls.Add(botonGuardar);
             groupclientes.Controls.Add(botonModificar);
@@ -165,6 +169,16 @@
             groupclientes.Size = new Size(538, 525);
             groupclientes.TabIndex = 0;
             groupclientes.TabStop = false;
+            // 
+            // buttonExcel
+            // 
+            buttonExcel.Location = new Point(171, 485);
+            buttonExcel.Name = "buttonExcel";
+            buttonExcel.Size = new Size(186, 34);
+            buttonExcel.TabIndex = 17;
+            buttonExcel.Text = "Exportar a Excel";
+            buttonExcel.UseVisualStyleBackColor = true;
+            buttonExcel.Click += buttonExcel_Click;
             // 
             // botonEliminar
             // 
@@ -346,6 +360,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Gainsboro;
+            groupBox1.Controls.Add(dataGridfactura);
             groupBox1.Controls.Add(buttoneliminarf);
             groupBox1.Controls.Add(buttonguardarf);
             groupBox1.Controls.Add(buttonuevof);
@@ -361,13 +376,23 @@
             groupBox1.Controls.Add(texttotalf);
             groupBox1.Controls.Add(textcantidadf);
             groupBox1.Controls.Add(textvalorunif);
-            groupBox1.Controls.Add(textcodigof);
+            groupBox1.Controls.Add(idcodigof);
             groupBox1.Location = new Point(8, 202);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1090, 329);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // dataGridfactura
+            // 
+            dataGridfactura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridfactura.Location = new Point(503, 1);
+            dataGridfactura.Name = "dataGridfactura";
+            dataGridfactura.RowHeadersWidth = 62;
+            dataGridfactura.RowTemplate.Height = 33;
+            dataGridfactura.Size = new Size(581, 260);
+            dataGridfactura.TabIndex = 20;
             // 
             // buttoneliminarf
             // 
@@ -386,6 +411,7 @@
             buttonguardarf.TabIndex = 16;
             buttonguardarf.Text = "Guardar";
             buttonguardarf.UseVisualStyleBackColor = true;
+            buttonguardarf.Click += buttonguardarf_Click;
             // 
             // buttonuevof
             // 
@@ -400,7 +426,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(460, 201);
+            label14.Location = new Point(452, 239);
             label14.Name = "label14";
             label14.Size = new Size(35, 25);
             label14.TabIndex = 12;
@@ -408,14 +434,14 @@
             // 
             // textelf
             // 
-            textelf.Location = new Point(460, 229);
+            textelf.Location = new Point(452, 267);
             textelf.Name = "textelf";
             textelf.Size = new Size(201, 31);
             textelf.TabIndex = 11;
             // 
             // textivaf
             // 
-            textivaf.Location = new Point(44, 229);
+            textivaf.Location = new Point(44, 267);
             textivaf.Name = "textivaf";
             textivaf.Size = new Size(344, 31);
             textivaf.TabIndex = 10;
@@ -431,7 +457,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(44, 201);
+            label12.Location = new Point(44, 239);
             label12.Name = "label12";
             label12.Size = new Size(34, 25);
             label12.TabIndex = 8;
@@ -440,7 +466,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(833, 92);
+            label11.Location = new Point(285, 167);
             label11.Name = "label11";
             label11.Size = new Size(48, 25);
             label11.TabIndex = 7;
@@ -449,7 +475,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(571, 92);
+            label10.Location = new Point(285, 92);
             label10.Name = "label10";
             label10.Size = new Size(82, 25);
             label10.TabIndex = 6;
@@ -458,7 +484,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(308, 92);
+            label9.Location = new Point(44, 167);
             label9.Name = "label9";
             label9.Size = new Size(80, 25);
             label9.TabIndex = 5;
@@ -469,37 +495,37 @@
             label8.AutoSize = true;
             label8.Location = new Point(44, 92);
             label8.Name = "label8";
-            label8.Size = new Size(68, 25);
+            label8.Size = new Size(89, 25);
             label8.TabIndex = 4;
-            label8.Text = "codigo";
+            label8.Text = "idcodigof";
             // 
             // texttotalf
             // 
-            texttotalf.Location = new Point(833, 120);
+            texttotalf.Location = new Point(285, 195);
             texttotalf.Name = "texttotalf";
             texttotalf.Size = new Size(212, 31);
             texttotalf.TabIndex = 3;
             // 
             // textcantidadf
             // 
-            textcantidadf.Location = new Point(308, 120);
+            textcantidadf.Location = new Point(44, 195);
             textcantidadf.Name = "textcantidadf";
             textcantidadf.Size = new Size(212, 31);
             textcantidadf.TabIndex = 2;
             // 
             // textvalorunif
             // 
-            textvalorunif.Location = new Point(571, 120);
+            textvalorunif.Location = new Point(285, 120);
             textvalorunif.Name = "textvalorunif";
             textvalorunif.Size = new Size(212, 31);
             textvalorunif.TabIndex = 1;
             // 
-            // textcodigof
+            // idcodigof
             // 
-            textcodigof.Location = new Point(44, 120);
-            textcodigof.Name = "textcodigof";
-            textcodigof.Size = new Size(212, 31);
-            textcodigof.TabIndex = 0;
+            idcodigof.Location = new Point(44, 120);
+            idcodigof.Name = "idcodigof";
+            idcodigof.Size = new Size(212, 31);
+            idcodigof.TabIndex = 0;
             // 
             // inventario
             // 
@@ -547,13 +573,13 @@
             groupBox2.Controls.Add(label18);
             groupBox2.Controls.Add(label17);
             groupBox2.Controls.Add(label16);
-            groupBox2.Controls.Add(dataGridi);
+            groupBox2.Controls.Add(dataGridinventario);
             groupBox2.Controls.Add(textdescripcioni);
             groupBox2.Controls.Add(textsalidasi);
             groupBox2.Controls.Add(textstocki);
             groupBox2.Controls.Add(textprecioi);
             groupBox2.Controls.Add(textimporteinventarioi);
-            groupBox2.Controls.Add(textcodigoi);
+            groupBox2.Controls.Add(idcodigoinv);
             groupBox2.Location = new Point(8, 119);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(1090, 412);
@@ -654,19 +680,19 @@
             label16.AutoSize = true;
             label16.Location = new Point(0, 40);
             label16.Name = "label16";
-            label16.Size = new Size(68, 25);
+            label16.Size = new Size(106, 25);
             label16.TabIndex = 8;
-            label16.Text = "codigo";
+            label16.Text = "idcodigoinv";
             // 
-            // dataGridi
+            // dataGridinventario
             // 
-            dataGridi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridi.Location = new Point(363, 30);
-            dataGridi.Name = "dataGridi";
-            dataGridi.RowHeadersWidth = 62;
-            dataGridi.RowTemplate.Height = 33;
-            dataGridi.Size = new Size(709, 325);
-            dataGridi.TabIndex = 7;
+            dataGridinventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridinventario.Location = new Point(363, 30);
+            dataGridinventario.Name = "dataGridinventario";
+            dataGridinventario.RowHeadersWidth = 62;
+            dataGridinventario.RowTemplate.Height = 33;
+            dataGridinventario.Size = new Size(709, 325);
+            dataGridinventario.TabIndex = 7;
             // 
             // textdescripcioni
             // 
@@ -703,12 +729,12 @@
             textimporteinventarioi.Size = new Size(150, 31);
             textimporteinventarioi.TabIndex = 1;
             // 
-            // textcodigoi
+            // idcodigoinv
             // 
-            textcodigoi.Location = new Point(0, 68);
-            textcodigoi.Name = "textcodigoi";
-            textcodigoi.Size = new Size(150, 31);
-            textcodigoi.TabIndex = 0;
+            idcodigoinv.Location = new Point(0, 68);
+            idcodigoinv.Name = "idcodigoinv";
+            idcodigoinv.Size = new Size(150, 31);
+            idcodigoinv.TabIndex = 0;
             // 
             // Menu
             // 
@@ -730,12 +756,13 @@
             facturacion.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridfactura).EndInit();
             inventario.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridinventario).EndInit();
             ResumeLayout(false);
         }
 
@@ -769,7 +796,7 @@
         private TextBox texttotalf;
         private TextBox textcantidadf;
         private TextBox textvalorunif;
-        private TextBox textcodigof;
+        private TextBox idcodigof;
         private Label label11;
         private Label label10;
         private Label label9;
@@ -789,13 +816,13 @@
         private Label label18;
         private Label label17;
         private Label label16;
-        private DataGridView dataGridi;
+        private DataGridView dataGridinventario;
         private TextBox textdescripcioni;
         private TextBox textsalidasi;
         private TextBox textstocki;
         private TextBox textprecioi;
         private TextBox textimporteinventarioi;
-        private TextBox textcodigoi;
+        private TextBox idcodigoinv;
         private Button buttoneliminarf;
         private Button buttonguardarf;
         private Button buttonuevof;
@@ -804,5 +831,7 @@
         private Button buttonuevoi;
         private DataGridView dataGrid;
         private TextBox textentradasi;
+        private DataGridView dataGridfactura;
+        private Button buttonExcel;
     }
 }

@@ -59,5 +59,12 @@ namespace CapaNegocio
             capadatos.Eliminar(cE);
         }
 
+        public void ExportarExcel2()
+        {
+            capadatos.ExportarExcel();
+        }
+
+
+
             }
 }
